@@ -67,10 +67,10 @@ input_gru = torch.cat((embedded, context), dim=2)
 - scores: [32, 1, 10] --- batch_size, , scores for each choice
 - scores(2)/weights: [32, 10, 1]
 - context: [32, 1, 128]
-![alt text](d1e8a0fc9e11e1c0fee4b52a576d869.png)
+![alt text](md-pic/d1e8a0fc9e11e1c0fee4b52a576d869.png)
 2. forward part:
-![alt text](5a5c4cdf1a4c1ce3af941ba57247fea.png)
+![alt text](md-pic/5a5c4cdf1a4c1ce3af941ba57247fea.png)
 3. output:
-![alt text](6221135a36a4ba71cb951a49f29d159.png)
+![alt text](md-pic/6221135a36a4ba71cb951a49f29d159.png)
 # ONNX model:
-![alt text](decoder.svg)
+![alt text](onnx/decoder.svg)

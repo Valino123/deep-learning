@@ -63,10 +63,21 @@ Recurrent Neural Networks (RNNs) inherently take the order of word into account;
     - Our model should generalize to longer sentences without any efforts. Its values should be bounded.
     - It must be deterministic.
 - method
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+![alt text](md-pics/image.png)
+![alt text](md-pics/image-1.png)
+![alt text](md-pics/image-2.png)
 It's like the float version of binary encoding 
 - property
     - For any offset k, $PE_{pos+k}$ can be represented as a linear function of $PE_{pos}$, thus allowing this model to easily learn to attend by relative positions
     - The distance between neighboring time-steps are symmetrical and decays nicely with time
+# Model Training
+## Batches and Masking
+## Training Loop
+## Training Data and Batching
+## Hardware and Schedule
+## Optimizer
+Adam optimizer
+## Regularization
+label smoothing
+- Label Smoothing is a regularization technique used in training Transformer models, and it’s designed to prevent the model from becoming overly confident about its predictions.In standard training, we use one-hot encoding for our labels, meaning that for each example, the model is trained to output a probability of 1 for the correct class and 0 for all other classes. However, this can lead to overfitting, as the model becomes overly certain about its predictions and may not generalize well to unseen data.Label Smoothing addresses this issue by softening the ground-truth labels. Instead of using a hard one-hot encoded vector, it uses a smoothed version where the value for the correct class is slightly less than 1, and a small value is distributed to the other classes23. This prevents the model from becoming overly confident about its predictions.The core idea is to penalize over-confident outputs and regularize the model so that its outputs do not diverge too much from some prior distribution2. While training perplexity generally gets worse, label smoothing is found to consistently improve test performance.
+https://towardsdatascience.com/label-smoothing-make-your-model-less-over-confident-b12ea6f81a9a

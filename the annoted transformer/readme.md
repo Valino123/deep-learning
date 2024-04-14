@@ -1,3 +1,4 @@
+From https://nlp.seas.harvard.edu/annotated-transformer/#embeddings-and-softmax
 # Background
 ## GPU, ByteNet, ConvS2S
 - pos: parallel with CNN
